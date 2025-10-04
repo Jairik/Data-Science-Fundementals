@@ -1,0 +1,94 @@
+%-----------------------------------------------------------------------------%
+% Modified by JJ McCauley
+% Borrowed from a template - no specific author mentioned
+% No direct affiliation with Salisbury University kind of - cover just looks cool
+%-----------------------------------------------------------------------------%
+
+\documentclass[12pt]{article}
+\usepackage[margin=1.1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts, fancyhdr, color, comment, graphicx, environ}
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage[none]{hyphenat}  % Stop work-breaking with hyphens
+\renewcommand{\footrulewidth}{0.8 pt}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\pagestyle{fancy}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+
+\newenvironment{solution}{\textbf{Solution}}
+
+
+\lhead{Jairik 'JJ' McCauley}
+\rhead{DSCI470 - Research Methods in Data Science} 
+\chead{\textbf{}}
+\lfoot{Dr. Cone}
+\rfoot{Salisbury University, MD}
+
+
+\begin{document}
+\input{coverPage}
+
+% Setting everything to single spacing
+\singlespacing
+
+% Adding a little space in between paragraphs for readability
+\setlength{\parskip}{0.5em}
+
+% Adding more spacing to make document feel less crammed
+\setlength{\headheight}{15pt}  % default ~12pt
+\setlength{\footskip}{40pt}    % add space at bottom
+
+% -------- ANALYSIS CONTENTS -----------
+\begin{text}
+
+% INTRO
+Ethics has become an essential consideration in the field of Data Science, especially as analyzing tools and data collection methods become more accessible and mainstream. Decisions made from the analysis of large datasets have the potential to impact individuals, organizations, and society as a whole. With a wide range of applications, the potential for positive and negative outcomes has grown exponentially. To better understand these challenges, I examined three articles on the ethics and integrity of Data Science. The first article, titled "\textit{Progress and recommendations in data ethics governance: a transnational analysis based on data ethics frameworks}", examines how different countries approach data ethics and provides recommendations for more responsible governance structures. The next article, titled "\textit{The effects of repetition frequency on the illusory truth effect}", investigates how the instances of exposure to a statement can influence the perceived truth.The last article I will be analyzing, titled "\textit{Ten Simple Rules for Responsible Big Data Research}", outlines various guidelines for researchers to minimize harm, protect privacy, and promote ethical practices when working with big data. Together, these readings highlight the importance of ethics and integrity in the Data Science field. This paper aims to reflect on the issues raised by the authors and provide my own insights, connecting the responsibilities of data scientists to the broader implications for society as I see them.
+
+% READING ONE (gov in data ethics)
+As big data ethics turns out to be a real-time concern across all domains, governments have faced pressure to enact various laws and principles to help advocate for the importance of data security and privacy protection. Most countries and organizations, such as the United States, China, and the EU recognize these concerns and have enacted various policies and guidelines to protect them (Qiu and Hu). This is especially relevant considering that the race for AGI and high-performing LLMs becomes rapidly more competitive, tempting private companies to disregard data ethics to outperform competing models (since adding more data through horizontal scaling is the easiest way to improve these models). Qui and Hu argued that "collaborative governance" would be the optimal approach to syncing worldwide interests, suggesting that everyone should follow a similar set of guidelines with aligning focuses. While these intentions are idealistic, countries and organizations that support AGI or LLM training facilities may present a level of pressure that push developers to cut corners on data ethics. Additionally, Qui and Hu stated that "legal support, ethical guidance, and regulatory mechanisms" are essential to data ethics governance. However, Qui and Hu later emphasized that countries and organizations should adapt their policies to ensure cultural alignment. This ambiguity could create an opportunity for loopholes or ideological misalignments to occur, allowing hyper-competitive private or public institutions to disregard the basic guidelines of data ethics. Due to these arguments, I do not believe that we can rely on governments or organizations to appropriately enforce proper data ethics. It is therefore important that we distill data ethics into a professional, universally recognized set of standards that can directly guide practitioners. Only through education, principled organizational codes of conduct, and peer accountability can we create a culture where ethical data usage is a core expectation of the field.
+
+% READING TWO (illusory truth effect)
+As data scientists, we need to recognize that we are storytellers. The interpretation of data can easily manifest itself as the truth, regardless of the actual logistical backing. For example, individuals can readily fall victim to the illusion effect. A 2021 study by Hassan and Barber confirmed this effect, showcasing that repeated statements are more likely to be perceived as true. This psychological behavior should be taken into account throughout the entire data-driven process as it can emerge through numerous avenues. Firstly, developers and engineers could have an inadvertent bias, subconsciously discrediting information that contradicts this belief. By discrediting certain results or modifying the data to achieve previous beliefs, the developer/engineer is effectively changing the story that the data tells. Therefore, it is essential that all data is given a valid opportunity to be observed and that results are reported as-is (just like the story that Dr. Cone told us, which I will never forget). Additionally, since data is commonly regarded as irrefutable and concrete, it can be abused and used as a tool to achieve predetermined objectives. This can be achieved by either cherry-picking data, such as the "chocolate helps weight loss" argument, or by presenting fictitious data, such as claiming that a supplement can cure a disease (both examples ironically from the health industry). Despite how absurd these "truths" may seem to be, many people still come to believe them due to the illusory truth effect. This becomes additionally applicable when considering the digital age of social media and online influences, providing untrained observers an opportunity to present and interpret data. Individuals can easily misrepresent data by manipulating visualizations or by omitting and distorting relevant context. Although this does not explicitly modify the data, it can transform the understanding and meaning of the story that it is trying to tell. Given the illusory truth effect, such misrepresentation can quickly spread among viewers and reinforce false beliefs, actively reshaping public perception. Ultimately, despite the significant challenges highlighted by Hassan and Barber when evaluating the illusory truth effect, it remains essential for data experts to account for such influences. The illusory truth effect, along with numerous other psychological and societal dynamics effects, can easily distort the story that the data is attempting to convey.
+
+% READING THREE (10 principles for data ethics)
+Reading \textit{Ten Simple Rules for Responsible Big Data Research} revealed clear parallels with many of the perspectives I shared in the previous articles. Firstly, this article argues points similar to the \textit{Data Ethics Governance} article when acknowledging the complexity of establishing any concrete set of rules, as each set of circumstances can be widely different. Furthermore, this article emphasizes the open nature of data ethics, urging researchers to contribute and engage in the formation of discussions rather than seek fixed answers. This requires moving away from the common engineering mindset of binary thinking and instead recognizing the trade-offs that emerge in these complex situations. In highly technical engineering fields, such discussions are vital for ensuring responsibility, especially as it is very easy for practitioners (myself included) to become absorbed in the technical details and overlook the ethical complications. These discussions, as highlighted by the \textit{Data Ethics Governance} conversation, are essential to ensure that all researchers, institutions, and companies remain responsible. This idea is particularly significant, as the article highlights that ethics usually falls on the researcher, given that most gathered data are not ethically collected. Although there are some advances in data collection, such as Apple's initiative that requires data collection apps to explicitly gain permission to track and share data via a clear pop-up, researchers should still exercise caution when using collected data. Building on this need for accountability, this reading also reinforced my thoughts from the \textit{illusory truth effect} article regarding providing proper context to findings. The reading mentions that it is irresponsible to chase only high metrics, such as maximizing accuracy for a predictive model. Instead, the engineer must fully understand the data, recognizing and acknowledging the flaws. I feel as if this is a vastly different mindset than what most engineers share, especially considering that we are typically taught and evaluated based solely on performance. Unlike in many academic settings, every dataset carries its own imperfections and has its own story. Every result carries with it potential implications, and it would be dishonest to neglect them. 
+
+% READING THREE CONT. - CRITIQUES
+While this article successfully reinforced many of my prior beliefs, it also raised numerous concerns. Firstly, I disagree with the author's emphasis on omitting personally identifiable details. Omitting any details of a study could prevent a full analysis and potentially block important solutions. For example, results of a study could present correlations to factors such as income or ethnicity, when the real indicating element was the omitted location. This not only risks amplifying the issues within that particular community, but also alters the story that the original data was attempting to display. Such distortion is misaligned with the goals of the field; Our role to be story tellers, not story writers. This leads to the question- at what point does privacy outweigh scientific discovery? Neglecting full transparency can cause just as much harm as cherry-picking or fabricating data, as it is still allowing for some group to control the narrative. These groups then gain the power to go unchecked, abusing "ethics" to hold power. For example, many government agencies around the world likely hold zettabytes of surveillance and citizen monitoring data, claiming "safety" as the reason. Given this, what expectation of privacy can citizens realistically have? Aside from governments, nearly all activities can be tracked (via backdoors and loose terms of services) and sold for purposes such as marketing. If this data was used for research purposes, there could be an exponential amount of scientific advancements and beneficial awareness initiatives. Although it remains important to consider the quality of the data collected and to take responsibility in using analytical results, why stray away from "harmful" data? I would rather confront the harm revealed by the data than remain ignorant, as my greatest fear is flipping through a story and seeing a page ripped out.
+
+% CONCLUSION
+As mentioned throughout this paper, data is meant to represent a story. Given this power, data scientist must understand the balance between innovating solutions and practicing proper ethics. As reflected in the readings and concurrent analysis, a uniform set of ethical standards is infeasible. It could not realistically enforced, as different circumstances impacts every scenario. Instead, accountability must derive from the profession and engineers themselves, understanding the potential impacts of their work. As storytellers, we must enact transparency and prioritize full context, recognizing and acknowledging the flaws in our work and the story. Additionally, the balance between privacy and innovation will always be in question. It is our responsibility as experts to contribute to these conversations, advocating for the overall benefit of society. Overall, ethics and integrity in data science boils down to more than adherence to guidelines. Instead, it is about the combined effort to emphasize integrity and trust, ensuring that data serves society rather than manipulate it.
+
+\end{text}
+
+% ------- REFERENCES ----------
+\newpage
+\section*{\begin{center}
+    References
+\end{center}}
+\begin{enumerate}
+    \item Qiu, Yanrui, and Zhimin Hu. “Progress and Recommendations in Data Ethics Governance: A Transnational Analysis Based on Data Ethics Frameworks.” Humanities and Social Sciences Communications, vol. 12, no. 1354, 2025, \href{https://doi.org/10.1057/s41599-025-05664-4}{https://doi.org/10.1057/s41599-025-05664-4}
+    \item Zook, Matthew, et al. “Ten Simple Rules for Responsible Big Data Research.” PLoS Computational Biology, vol. 13, no. 3, 2017, e1005399. Public Library of Science, \href{https://doi.org/10.1371/journal.pcbi.1005399}{https://doi.org/10.1371/journal.pcbi.1005399}
+    \item Hassan, Aumyo, and Sarah J. Barber. “The Effects of Repetition Frequency on the Illusory Truth Effect.” Cognitive Research: Principles and Implications, vol. 6, no. 38, 2021, \href{https://doi.org/10.1186/s41235-021-00301-5}{https://doi.org/10.1186/s41235-021-00301-5}
+\end{enumerate}
+% Gen AI Disclaimer
+ \begin{center}
+     \small{Generative AI was not used in this report.}
+ \end{center}
+
+
+\end{document}
