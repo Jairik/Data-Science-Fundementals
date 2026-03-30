@@ -1,0 +1,20 @@
+site_name: Data Science Fundamentals Portfolio
+site_description: Simple project summaries from notebooks and folder contents.
+docs_dir: docs
+site_dir: site
+theme:
+  name: mkdocs
+nav:
+  - Home: index.md
+  - Projects:
+    - Profiling Academic Trajectories: projects/profiling-academic-trajectories.md
+    - Life Expectancy Analysis: projects/life-expectancy-analysis.md
+    - Data Analysis and k-NN: projects/data-analysis-and-knn.md
+    - Data Analysis and PCA: projects/data-analysis-and-pca.md
+    - Gradient Descent: projects/gradient-descent.md
+    - Data Ethics Paper: projects/data-ethics.md
+    - Lecture Notes: projects/lecture-notes.md
+markdown_extensions:
+  - tables
+  - toc:
+      permalink: true
